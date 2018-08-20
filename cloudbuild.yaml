@@ -3,5 +3,5 @@ steps:
   args: ['install']
 artifacts:
   objects:
-    location: 'gs://cloudbuild-mm/web/'
-    paths: ['/*']
+    location: 'gs://cloudbuild-mm/'
+    paths: ['/web']
