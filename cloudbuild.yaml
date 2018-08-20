@@ -4,4 +4,4 @@ steps:
 artifacts:
   objects:
     location: 'gs://cloudbuild-mm/web/'
-    paths: ['/root/.m2/repository/junit/junit/4.13-SNAPSHOT/*']
+    paths: ['/workspace/target/*']
