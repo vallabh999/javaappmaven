@@ -3,5 +3,5 @@ steps:
   args: ['install']
 artifacts:
   objects:
-    location: 'gs://cloudbuild-mm/'
-    paths: ['/web']
+    location: 'gs://cloudbuild-mm/web/'
+    paths: ['/root/.m2/repository/junit/junit/4.13-SNAPSHOT/*']
