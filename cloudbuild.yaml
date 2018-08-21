@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', 'doc/', 'gs://cloudbuild-mm/web/doc.tar']
+  args: ['cp', '-r', '/workspace/doc/*', 'gs://cloudbuild-mm/web/doc.tar']
 artifacts:
   objects:
     location: 'gs://cloudbuild-mm/web/'
