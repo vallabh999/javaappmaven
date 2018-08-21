@@ -4,4 +4,5 @@ steps:
 artifacts:
   objects:
     location: 'gs://cloudbuild-mm/web/'
-    paths: ['/workspace/target/*']
+    paths: ['/workspace/target/*.jar']
+#
