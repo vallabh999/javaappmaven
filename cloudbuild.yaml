@@ -5,4 +5,5 @@ artifacts:
   objects:
     location: 'gs://cloudbuild-mm/web/'
     paths: ['/workspace/target/*.jar']
-#
+- name: 'gcr.io/$PROJECT_ID/gsutil'
+  args: ['ls']
