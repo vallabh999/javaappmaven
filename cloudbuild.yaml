@@ -1,9 +1,11 @@
 steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
+- name: 'gcr.io/cloud-builders/gsutil'
+  args: ['zip', '-rf', 'doc/', 'gs://cloudbuild-mm/web/doc.zip']
+  waitFor: ['-']  # The '-' indicates that this step begins immediately.
+  id: 'fetch-resources'
 artifacts:
   objects:
     location: 'gs://cloudbuild-mm/web/'
     paths: ['/workspace/target/*.jar']
-- name: 'gcr.io/cloud-builders/gsutil'
-  args: ['ls']
