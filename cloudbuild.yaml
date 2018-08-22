@@ -7,3 +7,4 @@ artifacts:
   objects:
     location: 'gs://cloudbuild-mm/web/'
     paths: ['/workspace/target/*.jar']
+#
